@@ -31,5 +31,3 @@ Email: [hello@maxkramer.co](mailto:hello@maxkramer.co)
 ##License
 
 This project complies with the [MIT license](https://github.com/MaxKramer/LuhnAlgorithm/blob/master/LICENSE).
-
-I accept no responsibility for any actions caused by this project or any of the files within this repository. Use at your own caution.
