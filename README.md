@@ -22,11 +22,11 @@ And then call the class method which returns a boolean value depending on the va
 
 If you come across any issues or feel like a chat, you can contact me using the following methods:
 
-Twitter: [@_max_k](http://twitter.com/_max_k)
+Twitter: [@maxkramer](http://twitter.com/maxkramer)
 
 Website: [http://maxkramer.co](http://maxkramer.co)
 
-Email: [hello@maxkramer.co](mailto:hello@maxkramer.co)
+Email: [max@maxkramer.co](mailto:max@maxkramer.co)
 
 ##License
 
