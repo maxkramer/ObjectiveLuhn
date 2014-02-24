@@ -14,6 +14,7 @@
 		5004D52C18BAEA410055C9AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5004D52A18BAEA410055C9AF /* InfoPlist.strings */; };
 		5004D52E18BAEA410055C9AF /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004D52D18BAEA410055C9AF /* Tests.m */; };
 		5004D53618BAEC310055C9AF /* TestCreditCardNumbers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5004D53518BAEC310055C9AF /* TestCreditCardNumbers.plist */; };
+		5004D53718BAF01A0055C9AF /* Luhn.m in Sources */ = {isa = PBXBuildFile; fileRef = 501B5F57168FD58B00726E65 /* Luhn.m */; };
 		501B5F58168FD59700726E65 /* Luhn.m in Sources */ = {isa = PBXBuildFile; fileRef = 501B5F57168FD58B00726E65 /* Luhn.m */; };
 		501C53A618BADE9200FF07AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 501C53A518BADE9200FF07AA /* Images.xcassets */; };
 		508E0A63168FC92800F237F4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508E0A62168FC92800F237F4 /* UIKit.framework */; };
@@ -322,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5004D53718BAF01A0055C9AF /* Luhn.m in Sources */,
 				5004D52E18BAEA410055C9AF /* Tests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
