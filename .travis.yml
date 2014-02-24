@@ -1,3 +1,5 @@
 language: objective-c
 branches: 
   only: master
+before_install:
+  cd Example\ Project
