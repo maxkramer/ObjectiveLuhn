@@ -30,6 +30,10 @@ Website: [http://maxkramer.co](http://maxkramer.co)
 
 Email: [max@maxkramer.co](mailto:max@maxkramer.co)
 
+## Thanks To
+
+Paypal for their test credit card numbers: [http://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm](http://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm)
+
 ##License
 
 This project complies with the [MIT license](https://github.com/MaxKramer/LuhnAlgorithm/blob/master/LICENSE).
