@@ -1,6 +1,8 @@
 Luhn Algorithm
 ==============
 
+[![Build Status](https://travis-ci.org/MaxKramer/ObjectiveLuhn.png?branch=master)](https://travis-ci.org/MaxKramer/ObjectiveLuhn)
+
 This is just a quick port of the Luhn Algorithm, generally used for validating Credit Card details, to Objective-C (iOS).
 
 I have included an example project showing how the method is called and how the validation can be interpreted.
