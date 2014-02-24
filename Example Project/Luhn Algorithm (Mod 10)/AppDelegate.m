@@ -16,7 +16,6 @@
     
     UIViewController *viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
     self.window.rootViewController = viewController;
-    
     [self.window makeKeyAndVisible];
     return YES;
 }
