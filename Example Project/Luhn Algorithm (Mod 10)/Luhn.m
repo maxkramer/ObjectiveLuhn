@@ -23,10 +23,10 @@
         NSInteger digit = [[NSString stringWithFormat:@"%C", [reversedString characterAtIndex:i]] integerValue];
         
         if (i % 2 == 0) {
-            odd_sum += digit;
+            even_sum += digit;
         }
         else {
-            even_sum += digit / 5 + ( 2 * digit) % 10;
+            odd_sum += digit / 5 + ( 2 * digit) % 10;
         }
     }
     return (odd_sum + even_sum) % 10 == 0;

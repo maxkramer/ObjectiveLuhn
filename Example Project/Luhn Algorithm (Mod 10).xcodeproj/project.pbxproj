@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		501B5F58168FD59700726E65 /* Luhn.m in Sources */ = {isa = PBXBuildFile; fileRef = 501B5F57168FD58B00726E65 /* Luhn.m */; };
+		501C53A618BADE9200FF07AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 501C53A518BADE9200FF07AA /* Images.xcassets */; };
 		508E0A63168FC92800F237F4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508E0A62168FC92800F237F4 /* UIKit.framework */; };
 		508E0A65168FC92800F237F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508E0A64168FC92800F237F4 /* Foundation.framework */; };
 		508E0A67168FC92800F237F4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508E0A66168FC92800F237F4 /* CoreGraphics.framework */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		501B5F56168FD58B00726E65 /* Luhn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Luhn.h; sourceTree = "<group>"; };
 		501B5F57168FD58B00726E65 /* Luhn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Luhn.m; sourceTree = "<group>"; };
+		501C53A518BADE9200FF07AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Luhn Algorithm (Mod 10)/Images.xcassets"; sourceTree = "<group>"; };
 		508E0A5E168FC92800F237F4 /* Luhn Algorithm (Mod 10).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Luhn Algorithm (Mod 10).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		508E0A62168FC92800F237F4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		508E0A64168FC92800F237F4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -69,6 +71,7 @@
 		508E0A53168FC92800F237F4 = {
 			isa = PBXGroup;
 			children = (
+				501C53A518BADE9200FF07AA /* Images.xcassets */,
 				50676D08168FD23E00218207 /* Luhn Algorithm */,
 				508E0A68168FC92800F237F4 /* Example Project */,
 				508E0A61168FC92800F237F4 /* Frameworks */,
@@ -176,6 +179,7 @@
 				508E0A6D168FC92800F237F4 /* InfoPlist.strings in Resources */,
 				508E0A75168FC92800F237F4 /* Default.png in Resources */,
 				508E0A77168FC92800F237F4 /* Default@2x.png in Resources */,
+				501C53A618BADE9200FF07AA /* Images.xcassets in Resources */,
 				508E0A79168FC92800F237F4 /* Default-568h@2x.png in Resources */,
 				508E0A7F168FC92800F237F4 /* ViewController.xib in Resources */,
 			);
@@ -268,6 +272,9 @@
 		508E0A83168FC92800F237F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Luhn Algorithm (Mod 10)/Luhn Algorithm (Mod 10)-Prefix.pch";
 				INFOPLIST_FILE = "Luhn Algorithm (Mod 10)/Luhn Algorithm (Mod 10)-Info.plist";
@@ -279,6 +286,9 @@
 		508E0A84168FC92800F237F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Luhn Algorithm (Mod 10)/Luhn Algorithm (Mod 10)-Prefix.pch";
 				INFOPLIST_FILE = "Luhn Algorithm (Mod 10)/Luhn Algorithm (Mod 10)-Info.plist";
