@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		501B5F58168FD59700726E65 /* Luhn.m in Sources */ = {isa = PBXBuildFile; fileRef = 501B5F57168FD58B00726E65 /* Luhn.m */; };
 		508E0A63168FC92800F237F4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508E0A62168FC92800F237F4 /* UIKit.framework */; };
 		508E0A65168FC92800F237F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508E0A64168FC92800F237F4 /* Foundation.framework */; };
 		508E0A67168FC92800F237F4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508E0A66168FC92800F237F4 /* CoreGraphics.framework */; };
@@ -19,11 +18,10 @@
 		508E0A79168FC92800F237F4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 508E0A78168FC92800F237F4 /* Default-568h@2x.png */; };
 		508E0A7C168FC92800F237F4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 508E0A7B168FC92800F237F4 /* ViewController.m */; };
 		508E0A7F168FC92800F237F4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508E0A7D168FC92800F237F4 /* ViewController.xib */; };
+		86FF5CFE360A4E6398C78E03 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 99C22C383A2045B3A4ABC656 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		501B5F56168FD58B00726E65 /* Luhn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Luhn.h; sourceTree = "<group>"; };
-		501B5F57168FD58B00726E65 /* Luhn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Luhn.m; sourceTree = "<group>"; };
 		508E0A5E168FC92800F237F4 /* Luhn Algorithm (Mod 10).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Luhn Algorithm (Mod 10).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		508E0A62168FC92800F237F4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		508E0A64168FC92800F237F4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,6 +38,8 @@
 		508E0A7A168FC92800F237F4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		508E0A7B168FC92800F237F4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		508E0A7E168FC92800F237F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		99C22C383A2045B3A4ABC656 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5253708996E4A2383DCAFB3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,29 +50,20 @@
 				508E0A63168FC92800F237F4 /* UIKit.framework in Frameworks */,
 				508E0A65168FC92800F237F4 /* Foundation.framework in Frameworks */,
 				508E0A67168FC92800F237F4 /* CoreGraphics.framework in Frameworks */,
+				86FF5CFE360A4E6398C78E03 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		50676D08168FD23E00218207 /* Luhn Algorithm */ = {
-			isa = PBXGroup;
-			children = (
-				501B5F56168FD58B00726E65 /* Luhn.h */,
-				501B5F57168FD58B00726E65 /* Luhn.m */,
-			);
-			name = "Luhn Algorithm";
-			path = "Luhn Algorithm (Mod 10)";
-			sourceTree = "<group>";
-		};
 		508E0A53168FC92800F237F4 = {
 			isa = PBXGroup;
 			children = (
-				50676D08168FD23E00218207 /* Luhn Algorithm */,
 				508E0A68168FC92800F237F4 /* Example Project */,
 				508E0A61168FC92800F237F4 /* Frameworks */,
 				508E0A5F168FC92800F237F4 /* Products */,
+				C5253708996E4A2383DCAFB3 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +81,7 @@
 				508E0A62168FC92800F237F4 /* UIKit.framework */,
 				508E0A64168FC92800F237F4 /* Foundation.framework */,
 				508E0A66168FC92800F237F4 /* CoreGraphics.framework */,
+				99C22C383A2045B3A4ABC656 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -129,9 +121,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 508E0A82168FC92800F237F4 /* Build configuration list for PBXNativeTarget "Luhn Algorithm (Mod 10)" */;
 			buildPhases = (
+				00C43FAC3DA14397BD6F800A /* Check Pods Manifest.lock */,
 				508E0A5A168FC92800F237F4 /* Sources */,
 				508E0A5B168FC92800F237F4 /* Frameworks */,
 				508E0A5C168FC92800F237F4 /* Resources */,
+				2BBABA6A06E1492BAC1E280D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -183,6 +177,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00C43FAC3DA14397BD6F800A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		2BBABA6A06E1492BAC1E280D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		508E0A5A168FC92800F237F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -191,7 +218,6 @@
 				508E0A6F168FC92800F237F4 /* main.m in Sources */,
 				508E0A73168FC92800F237F4 /* AppDelegate.m in Sources */,
 				508E0A7C168FC92800F237F4 /* ViewController.m in Sources */,
-				501B5F58168FD59700726E65 /* Luhn.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +293,7 @@
 		};
 		508E0A83168FC92800F237F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5253708996E4A2383DCAFB3 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Luhn Algorithm (Mod 10)/Luhn Algorithm (Mod 10)-Prefix.pch";
@@ -278,6 +305,7 @@
 		};
 		508E0A84168FC92800F237F4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C5253708996E4A2383DCAFB3 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Luhn Algorithm (Mod 10)/Luhn Algorithm (Mod 10)-Prefix.pch";
