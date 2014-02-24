@@ -3,5 +3,6 @@ branches:
   only: master, tests
 before_install:
   cd Example\ Project
-  gem install cocoapods
-  pod install
+  brew update
+  brew install xctool
+script: xctool test -workspace Luhn\ Algorithm\ \(Mod\ 10\).xcworkspace -scheme Luhn\ Algorithm\ \(Mod\ 10\) -sdk iphonesimulator -configuration Release
