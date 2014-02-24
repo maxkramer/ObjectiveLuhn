@@ -1,0 +1,14 @@
+PODS:
+  - ObjectiveLuhn (1.0.0)
+
+DEPENDENCIES:
+  - ObjectiveLuhn (from `../ObjectiveLuhn.podspec`)
+
+EXTERNAL SOURCES:
+  ObjectiveLuhn:
+    :path: ../ObjectiveLuhn.podspec
+
+SPEC CHECKSUMS:
+  ObjectiveLuhn: c14fcbe1d9920f0159ec5301e623b489efcb63a5
+
+COCOAPODS: 0.29.0
