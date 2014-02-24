@@ -9,18 +9,22 @@ I have included an example project showing how the method is called and how the 
 
 To validate the details all you need to do is import the header file:
 
-    #import "Luhn.h"
+```obj-c
+#import "Luhn.h"
+```
     
 And then call the class method which returns a boolean value depending on the validity of the input string:
 
-    BOOL isValid = [Luhn validateString:@"some credit card number"];
+```obj-c
+BOOL isValid = [Luhn validateString:@"some credit card number"];
     
-    if (isValid) {
-       // process payment   
-    }
-    else {
-       // alert user
-    }
+if (isValid) {
+    // process payment   
+}
+else {
+    // alert user
+}
+```
 
 If you come across any issues or feel like a chat, you can contact me using the following methods:
 
