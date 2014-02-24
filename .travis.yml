@@ -3,3 +3,5 @@ branches:
   only: master, tests
 before_install:
   cd Example\ Project
+  gem install cocoapods
+  pod install

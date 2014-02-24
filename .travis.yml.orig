@@ -1,9 +1,0 @@
-language: objective-c
-branches: 
-<<<<<<< HEAD
-  only: master, tests
-=======
-  only: master
-before_install:
-  cd Example\ Project
->>>>>>> updated travis config
