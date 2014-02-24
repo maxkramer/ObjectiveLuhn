@@ -1,0 +1,4 @@
+language: objective-c
+branches:
+	only:
+		master
