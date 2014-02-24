@@ -3,4 +3,4 @@ branches:
   only: master, tests
 rvm: 1.9.3
 before_script: travis/pre.sh
-script: travis/script.sh:
+script: travis/script.sh
