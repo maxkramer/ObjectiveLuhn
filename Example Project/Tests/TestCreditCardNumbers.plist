@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>valid</key>
+	<array>
+		<string>378282246310005</string>
+		<string>371449635398431</string>
+		<string>378734493671000</string>
+		<string>5610591081018250</string>
+		<string>30569309025904</string>
+		<string>38520000023237</string>
+		<string>6011111111111117</string>
+		<string>6011000990139424</string>
+		<string>3530111333300000</string>
+		<string>3566002020360505</string>
+		<string>5555555555554444</string>
+		<string>5105105105105100</string>
+		<string>4111111111111111</string>
+		<string>4012888888881881</string>
+		<string>4222222222222</string>
+	</array>
+	<key>invalid</key>
+	<array>
+		<string>1234567812345678</string>
+		<string>49927398717</string>
+		<string>33036103566</string>
+		<string>32129486301</string>
+		<string>32882469031</string>
+		<string>33841333111</string>
+		<string>30086326829</string>
+		<string>41609620055</string>
+		<string>43717494988</string>
+		<string>60131753761</string>
+		<string>62752137389</string>
+		<string>51837652542</string>
+		<string>53372289611</string>
+		<string>51484050781</string>
+		<string>93392751739</string>
+	</array>
+</dict>
+</plist>
