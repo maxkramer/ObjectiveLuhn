@@ -22,18 +22,17 @@ And then call the class method which returns a boolean value depending on the va
        // alert user
     }
 
-If you come across any issues or feel like a chat, you can contact me using the following methods:
+
+If you come across any issues or have a feature request, please open an issue or find me on:
 
 Twitter: [@maxkramer](http://twitter.com/maxkramer)
 
 Website: [http://maxkramer.co](http://maxkramer.co)
 
-Email: [max@maxkramer.co](mailto:max@maxkramer.co)
-
-## Thanks To
+## Sources
 
 Paypal for their test credit card numbers: [http://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm](http://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm)
 
-##License
+## License
 
 This project complies with the [MIT license](https://github.com/MaxKramer/LuhnAlgorithm/blob/master/LICENSE).
