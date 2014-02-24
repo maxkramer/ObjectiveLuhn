@@ -10,10 +10,8 @@
 
 @interface ViewController : UIViewController <UITextFieldDelegate>
 
-@property (nonatomic, retain) IBOutlet UILabel *resultLabel;
-
-@property (nonatomic, retain) IBOutlet UITextField *textField;
-
-@property (nonatomic, retain) IBOutlet UIButton *validateButton;
+@property (nonatomic, weak) IBOutlet UILabel *resultLabel;
+@property (nonatomic, weak) IBOutlet UITextField *textField;
+@property (nonatomic, weak) IBOutlet UIButton *validateButton;
 
 @end

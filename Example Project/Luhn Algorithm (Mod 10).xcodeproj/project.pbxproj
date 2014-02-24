@@ -7,7 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		471C843244D842AABE6A468A /* libPods-Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED7D61ED784D495FA5F58B96 /* libPods-Tests.a */; };
+		5004D52418BAEA410055C9AF /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 501C53AC18BADF2300FF07AA /* XCTest.framework */; };
+		5004D52518BAEA410055C9AF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508E0A64168FC92800F237F4 /* Foundation.framework */; };
+		5004D52618BAEA410055C9AF /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508E0A62168FC92800F237F4 /* UIKit.framework */; };
+		5004D52C18BAEA410055C9AF /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5004D52A18BAEA410055C9AF /* InfoPlist.strings */; };
+		5004D52E18BAEA410055C9AF /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5004D52D18BAEA410055C9AF /* Tests.m */; };
+		5004D53618BAEC310055C9AF /* TestCreditCardNumbers.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5004D53518BAEC310055C9AF /* TestCreditCardNumbers.plist */; };
+		5004D53718BAF01A0055C9AF /* Luhn.m in Sources */ = {isa = PBXBuildFile; fileRef = 501B5F57168FD58B00726E65 /* Luhn.m */; };
 		501B5F58168FD59700726E65 /* Luhn.m in Sources */ = {isa = PBXBuildFile; fileRef = 501B5F57168FD58B00726E65 /* Luhn.m */; };
+		501C53A618BADE9200FF07AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 501C53A518BADE9200FF07AA /* Images.xcassets */; };
 		508E0A63168FC92800F237F4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508E0A62168FC92800F237F4 /* UIKit.framework */; };
 		508E0A65168FC92800F237F4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508E0A64168FC92800F237F4 /* Foundation.framework */; };
 		508E0A67168FC92800F237F4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 508E0A66168FC92800F237F4 /* CoreGraphics.framework */; };
@@ -21,9 +30,28 @@
 		508E0A7F168FC92800F237F4 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 508E0A7D168FC92800F237F4 /* ViewController.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5004D53018BAEA410055C9AF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 508E0A55168FC92800F237F4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 508E0A5D168FC92800F237F4;
+			remoteInfo = "Luhn Algorithm (Mod 10)";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		039C8844EDD641208751B55F /* Pods-Tests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tests.xcconfig"; path = "Pods/Pods-Tests.xcconfig"; sourceTree = "<group>"; };
+		5004D52318BAEA410055C9AF /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5004D52918BAEA410055C9AF /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
+		5004D52B18BAEA410055C9AF /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5004D52D18BAEA410055C9AF /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+		5004D52F18BAEA410055C9AF /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		5004D53518BAEC310055C9AF /* TestCreditCardNumbers.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestCreditCardNumbers.plist; sourceTree = "<group>"; };
 		501B5F56168FD58B00726E65 /* Luhn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Luhn.h; sourceTree = "<group>"; };
 		501B5F57168FD58B00726E65 /* Luhn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Luhn.m; sourceTree = "<group>"; };
+		501C53A518BADE9200FF07AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "Luhn Algorithm (Mod 10)/Images.xcassets"; sourceTree = "<group>"; };
+		501C53AC18BADF2300FF07AA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		508E0A5E168FC92800F237F4 /* Luhn Algorithm (Mod 10).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Luhn Algorithm (Mod 10).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		508E0A62168FC92800F237F4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		508E0A64168FC92800F237F4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -40,9 +68,21 @@
 		508E0A7A168FC92800F237F4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		508E0A7B168FC92800F237F4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		508E0A7E168FC92800F237F4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		ED7D61ED784D495FA5F58B96 /* libPods-Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5004D52018BAEA410055C9AF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5004D52418BAEA410055C9AF /* XCTest.framework in Frameworks */,
+				5004D52618BAEA410055C9AF /* UIKit.framework in Frameworks */,
+				5004D52518BAEA410055C9AF /* Foundation.framework in Frameworks */,
+				471C843244D842AABE6A468A /* libPods-Tests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		508E0A5B168FC92800F237F4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -56,6 +96,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5004D52718BAEA410055C9AF /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5004D52D18BAEA410055C9AF /* Tests.m */,
+				5004D52818BAEA410055C9AF /* Supporting Files */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		5004D52818BAEA410055C9AF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5004D53518BAEC310055C9AF /* TestCreditCardNumbers.plist */,
+				5004D52918BAEA410055C9AF /* Tests-Info.plist */,
+				5004D52A18BAEA410055C9AF /* InfoPlist.strings */,
+				5004D52F18BAEA410055C9AF /* Tests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		50676D08168FD23E00218207 /* Luhn Algorithm */ = {
 			isa = PBXGroup;
 			children = (
@@ -69,10 +129,13 @@
 		508E0A53168FC92800F237F4 = {
 			isa = PBXGroup;
 			children = (
+				501C53A518BADE9200FF07AA /* Images.xcassets */,
 				50676D08168FD23E00218207 /* Luhn Algorithm */,
 				508E0A68168FC92800F237F4 /* Example Project */,
+				5004D52718BAEA410055C9AF /* Tests */,
 				508E0A61168FC92800F237F4 /* Frameworks */,
 				508E0A5F168FC92800F237F4 /* Products */,
+				039C8844EDD641208751B55F /* Pods-Tests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				508E0A5E168FC92800F237F4 /* Luhn Algorithm (Mod 10).app */,
+				5004D52318BAEA410055C9AF /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -90,6 +154,8 @@
 				508E0A62168FC92800F237F4 /* UIKit.framework */,
 				508E0A64168FC92800F237F4 /* Foundation.framework */,
 				508E0A66168FC92800F237F4 /* CoreGraphics.framework */,
+				501C53AC18BADF2300FF07AA /* XCTest.framework */,
+				ED7D61ED784D495FA5F58B96 /* libPods-Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,6 +191,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5004D52218BAEA410055C9AF /* Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5004D53218BAEA410055C9AF /* Build configuration list for PBXNativeTarget "Tests" */;
+			buildPhases = (
+				4F1797445D2246AFB7AD4F7D /* Check Pods Manifest.lock */,
+				5004D51F18BAEA410055C9AF /* Sources */,
+				5004D52018BAEA410055C9AF /* Frameworks */,
+				5004D52118BAEA410055C9AF /* Resources */,
+				C678A7822B9E4CC2978452BF /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5004D53118BAEA410055C9AF /* PBXTargetDependency */,
+			);
+			name = Tests;
+			productName = Tests;
+			productReference = 5004D52318BAEA410055C9AF /* Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		508E0A5D168FC92800F237F4 /* Luhn Algorithm (Mod 10) */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 508E0A82168FC92800F237F4 /* Build configuration list for PBXNativeTarget "Luhn Algorithm (Mod 10)" */;
@@ -150,6 +236,11 @@
 			attributes = {
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Max Kramer";
+				TargetAttributes = {
+					5004D52218BAEA410055C9AF = {
+						TestTargetID = 508E0A5D168FC92800F237F4;
+					};
+				};
 			};
 			buildConfigurationList = 508E0A58168FC92800F237F4 /* Build configuration list for PBXProject "Luhn Algorithm (Mod 10)" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -164,11 +255,21 @@
 			projectRoot = "";
 			targets = (
 				508E0A5D168FC92800F237F4 /* Luhn Algorithm (Mod 10) */,
+				5004D52218BAEA410055C9AF /* Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5004D52118BAEA410055C9AF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5004D53618BAEC310055C9AF /* TestCreditCardNumbers.plist in Resources */,
+				5004D52C18BAEA410055C9AF /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		508E0A5C168FC92800F237F4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -176,6 +277,7 @@
 				508E0A6D168FC92800F237F4 /* InfoPlist.strings in Resources */,
 				508E0A75168FC92800F237F4 /* Default.png in Resources */,
 				508E0A77168FC92800F237F4 /* Default@2x.png in Resources */,
+				501C53A618BADE9200FF07AA /* Images.xcassets in Resources */,
 				508E0A79168FC92800F237F4 /* Default-568h@2x.png in Resources */,
 				508E0A7F168FC92800F237F4 /* ViewController.xib in Resources */,
 			);
@@ -183,7 +285,49 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4F1797445D2246AFB7AD4F7D /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C678A7822B9E4CC2978452BF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-Tests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		5004D51F18BAEA410055C9AF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5004D53718BAF01A0055C9AF /* Luhn.m in Sources */,
+				5004D52E18BAEA410055C9AF /* Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		508E0A5A168FC92800F237F4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -197,7 +341,23 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5004D53118BAEA410055C9AF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 508E0A5D168FC92800F237F4 /* Luhn Algorithm (Mod 10) */;
+			targetProxy = 5004D53018BAEA410055C9AF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		5004D52A18BAEA410055C9AF /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5004D52B18BAEA410055C9AF /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		508E0A6B168FC92800F237F4 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -217,6 +377,77 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5004D53318BAEA410055C9AF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 039C8844EDD641208751B55F /* Pods-Tests.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Luhn Algorithm (Mod 10).app/Luhn Algorithm (Mod 10)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5004D53418BAEA410055C9AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 039C8844EDD641208751B55F /* Pods-Tests.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Luhn Algorithm (Mod 10).app/Luhn Algorithm (Mod 10)";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 		508E0A80168FC92800F237F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -268,6 +499,9 @@
 		508E0A83168FC92800F237F4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Luhn Algorithm (Mod 10)/Luhn Algorithm (Mod 10)-Prefix.pch";
 				INFOPLIST_FILE = "Luhn Algorithm (Mod 10)/Luhn Algorithm (Mod 10)-Info.plist";
@@ -279,6 +513,9 @@
 		508E0A84168FC92800F237F4 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Luhn Algorithm (Mod 10)/Luhn Algorithm (Mod 10)-Prefix.pch";
 				INFOPLIST_FILE = "Luhn Algorithm (Mod 10)/Luhn Algorithm (Mod 10)-Info.plist";
@@ -290,6 +527,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5004D53218BAEA410055C9AF /* Build configuration list for PBXNativeTarget "Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5004D53318BAEA410055C9AF /* Debug */,
+				5004D53418BAEA410055C9AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		508E0A58168FC92800F237F4 /* Build configuration list for PBXProject "Luhn Algorithm (Mod 10)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
