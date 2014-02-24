@@ -1,14 +1,14 @@
 PODS:
-  - ObjectiveLuhn (1.0.0)
+  - Kiwi/ARC (2.2.3)
+  - Kiwi/NonARC (2.2.3)
+  - Kiwi/XCTest (2.2.3):
+    - Kiwi/ARC
+    - Kiwi/NonARC
 
 DEPENDENCIES:
-  - ObjectiveLuhn (from `../ObjectiveLuhn.podspec`)
-
-EXTERNAL SOURCES:
-  ObjectiveLuhn:
-    :path: ../ObjectiveLuhn.podspec
+  - Kiwi/XCTest
 
 SPEC CHECKSUMS:
-  ObjectiveLuhn: c14fcbe1d9920f0159ec5301e623b489efcb63a5
+  Kiwi: 04c51e880831d291748ec702d42c4101f7eb95c9
 
 COCOAPODS: 0.29.0
