@@ -10,26 +10,26 @@
 
 @implementation Luhn
 
-+ (BOOL) validateString:(NSString *) _string {
-    NSMutableString *reversedString = [NSMutableString stringWithCapacity:[_string length]];
++ (BOOL)validateString:(NSString *)string {
+    NSMutableString *reversedString = [NSMutableString stringWithCapacity:[string length]];
     
-    [_string enumerateSubstringsInRange:NSMakeRange(0, [_string length]) options:(NSStringEnumerationReverse |NSStringEnumerationByComposedCharacterSequences) usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+    [string enumerateSubstringsInRange:NSMakeRange(0, [string length]) options:(NSStringEnumerationReverse |NSStringEnumerationByComposedCharacterSequences) usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
         [reversedString appendString:substring];
     }];
         
-    unsigned int odd_sum = 0, even_sum = 0;
+    NSUInteger oddSum = 0, evenSum = 0;
     
-    for (int i = 0; i < [reversedString length]; i++) {
+    for (NSUInteger i = 0; i < [reversedString length]; i++) {
         NSInteger digit = [[NSString stringWithFormat:@"%C", [reversedString characterAtIndex:i]] integerValue];
         
         if (i % 2 == 0) {
-            even_sum += digit;
+            evenSum += digit;
         }
         else {
-            odd_sum += digit / 5 + ( 2 * digit) % 10;
+            oddSum += digit / 5 + (2 * digit) % 10;
         }
     }
-    return (odd_sum + even_sum) % 10 == 0;
+    return (oddSum + evenSum) % 10 == 0;
 }
 
 @end
