@@ -35,7 +35,7 @@ Website: [http://maxkramer.co](http://maxkramer.co)
 
 ## Sources
 
-Paypal for their test credit card numbers: [http://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm](http://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm)
+Paypal for the test credit card numbers: [http://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm](http://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm)
 
 ## License
 
