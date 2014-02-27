@@ -48,6 +48,7 @@ OLCreditCardType = [Luhn typeFromString:ccNumber];
 If you come across any issues or have a feature request, please open an issue or find me on:
 
 Twitter: [@maxkramer](http://twitter.com/maxkramer)
+
 Website: [http://maxkramer.co](http://maxkramer.co)
 
 ## Sources
@@ -56,6 +57,12 @@ Website: [http://maxkramer.co](http://maxkramer.co)
 |:---|:------|:-----|
 |Paypal|[http://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm](http://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm)|List of valid credit card numbers for the unit tests|
 
+## Thanks
+
+Ayaka Nonaka for updating the Cocoapod spec and helping me with other aspects of the project!
+
+Twitter: [@ayanonagon](https://twitter.com/ayanonagon)
+
 ## License
 
-This project complies with the [MIT license](https://github.com/MaxKramer/LuhnAlgorithm/blob/master/LICENSE).
+This project is licensed under the [MIT license](https://github.com/MaxKramer/LuhnAlgorithm/blob/master/LICENSE).
