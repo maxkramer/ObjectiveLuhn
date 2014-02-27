@@ -50,7 +50,7 @@
     __block OLCreditCardType type = OLCreditCardTypeInvalid;
     [enums enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         OLCreditCardType _type = [obj integerValue];
-        NSPredicate *predicate = [Luhn predicateForType:type];
+        NSPredicate *predicate = [Luhn predicateForType:_type];
         BOOL isCurrentType = [predicate evaluateWithObject:formattedString];
         if (isCurrentType) {
             type = _type;
@@ -64,30 +64,30 @@
     if (type == OLCreditCardTypeInvalid || type == OLCreditCardTypeUnsupported) {
         return nil;
     }
-    NSMutableString *format = [NSMutableString stringWithString:@"%@ MATCHES "];
+    NSString *regex = nil;
     switch (type) {
         case OLCreditCardTypeAmex:
-            [format appendString:@"^3[47][0-9]{5,}$"];
+            regex = @"^3[47][0-9]{5,}$";
             break;
         case OLCreditCardTypeDinersClub:
-            [format appendString:@"^3(?:0[0-5]|[68][0-9])[0-9]{4,}$"];
+            regex = @"^3(?:0[0-5]|[68][0-9])[0-9]{4,}$";
             break;
         case OLCreditCardTypeDiscover:
-            [format appendString:@"^6(?:011|5[0-9]{2})[0-9]{3,}$"];
+            regex = @"^6(?:011|5[0-9]{2})[0-9]{3,}$";
             break;
         case OLCreditCardTypeJCB:
-            [format appendString:@"^(?:2131|1800|35[0-9]{3})[0-9]{3,}$"];
+            regex = @"^(?:2131|1800|35[0-9]{3})[0-9]{3,}$";
             break;
         case OLCreditCardTypeMastercard:
-            [format appendString:@"^5[1-5][0-9]{5,}$"];
+            regex = @"^5[1-5][0-9]{5,}$";
             break;
         case OLCreditCardTypeVisa:
-            [format appendString:@"^4[0-9]{6,}$ "];
+            regex = @"^4[0-9]{6,}$";
             break;
         default:
             break;
     }
-    return [NSPredicate predicateWithFormat:format];
+    return [NSPredicate predicateWithFormat:@"SELF MATCHES %@", regex];
 }
 
 + (BOOL) validateString:(NSString *)string forType:(OLCreditCardType)type {

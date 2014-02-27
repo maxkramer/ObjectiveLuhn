@@ -30,10 +30,23 @@ describe(@"Algorithm", ^{
         [[@([validNumbers count]) should] beGreaterThan:@(0)];
     });
 
-    [validNumbers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-       it([NSString stringWithFormat:@"Should find that %@ is valid", obj], ^{
-           BOOL valid = [Luhn validateString:obj] && [obj isValidCreditCardNumber];
-           [[@(valid) should] beTrue];
+    [validNumbers enumerateObjectsUsingBlock:^(NSDictionary *dict, NSUInteger idx, BOOL *stop) {
+       it([NSString stringWithFormat:@"Should find that %@ is valid and contains two keys", dict], ^{
+           [[dict should] beNonNil];
+           [[@(dict.allKeys.count) should] equal:@(2)];
+       });
+        it(@"Should find that the number is valid and that its type is correct", ^{
+            NSString *number = dict[@"number"];
+            NSString *typeString = dict[@"type"];
+            OLCreditCardType actualType = [typeString isEqualToString:@"amex"] ? OLCreditCardTypeAmex : [typeString isEqualToString:@"diners"] ? OLCreditCardTypeDinersClub : [typeString isEqualToString:@"discover"] ? OLCreditCardTypeDiscover : [typeString isEqualToString:@"jcb"] ? OLCreditCardTypeJCB : [typeString isEqualToString:@"mastercard"] ? OLCreditCardTypeMastercard : OLCreditCardTypeVisa;
+            
+            BOOL valid = [Luhn validateString:number] && [number isValidCreditCardNumber];
+            [[@(valid) should] beTrue];
+            
+            OLCreditCardType calculatedType = [Luhn typeFromString:number];
+            NSLog(@"Found %@ (%@ = %@) = %@", number, typeString, @(actualType), @(calculatedType));
+            [[@(actualType) should] equal:@(calculatedType)];
+            [[@(calculatedType) should] equal:@([number creditCardType])];
        });
     }];
     
