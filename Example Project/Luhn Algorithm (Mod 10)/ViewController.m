@@ -25,7 +25,7 @@
         return YES;
     }
     
-    BOOL isValid = [Luhn validateString:[self.textField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]]];
+    BOOL isValid = [self.textField.text isValidCreditCardNumber];
     [self.resultLabel setText:[NSString stringWithFormat:@"The number you entered is %@!", isValid ? @"valid" : @"isn't valid"]];
     
     [UIView animateWithDuration:0.5f delay:0.0f options:UIViewAnimationOptionAutoreverse animations:^{

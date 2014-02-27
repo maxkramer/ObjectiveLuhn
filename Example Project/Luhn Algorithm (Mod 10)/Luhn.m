@@ -8,6 +8,18 @@
 
 #import "Luhn.h"
 
+@implementation NSString (Luhn)
+
+- (BOOL) isValidCreditCardNumber {
+    return [Luhn validateString:self];
+}
+
+- (OLCreditCardType) creditCardType {
+    return [Luhn typeFromString:self];
+}
+
+@end
+
 @interface NSString (Luhn_Private)
 
 - (NSString *) formattedStringForProcessing;
@@ -26,6 +38,62 @@
 
 @implementation Luhn
 
++ (OLCreditCardType) typeFromString:(NSString *) string {
+    BOOL valid = [string isValidCreditCardNumber];
+    if (!valid) {
+        return OLCreditCardTypeInvalid;
+    }
+    
+    NSString *formattedString = [string formattedStringForProcessing];
+    NSArray *enums = @[@(OLCreditCardTypeAmex), @(OLCreditCardTypeDinersClub), @(OLCreditCardTypeDiscover), @(OLCreditCardTypeJCB), @(OLCreditCardTypeMastercard), @(OLCreditCardTypeVisa)];
+    
+    __block OLCreditCardType type = OLCreditCardTypeInvalid;
+    [enums enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        OLCreditCardType _type = [obj integerValue];
+        NSPredicate *predicate = [Luhn predicateForType:type];
+        BOOL isCurrentType = [predicate evaluateWithObject:formattedString];
+        if (isCurrentType) {
+            type = _type;
+            *stop = YES;
+        }
+    }];
+    return type;
+}
+
++ (NSPredicate *) predicateForType:(OLCreditCardType) type {
+    if (type == OLCreditCardTypeInvalid || type == OLCreditCardTypeUnsupported) {
+        return nil;
+    }
+    NSMutableString *format = [NSMutableString stringWithString:@"%@ MATCHES "];
+    switch (type) {
+        case OLCreditCardTypeAmex:
+            [format appendString:@"^3[47][0-9]{5,}$"];
+            break;
+        case OLCreditCardTypeDinersClub:
+            [format appendString:@"^3(?:0[0-5]|[68][0-9])[0-9]{4,}$"];
+            break;
+        case OLCreditCardTypeDiscover:
+            [format appendString:@"^6(?:011|5[0-9]{2})[0-9]{3,}$"];
+            break;
+        case OLCreditCardTypeJCB:
+            [format appendString:@"^(?:2131|1800|35[0-9]{3})[0-9]{3,}$"];
+            break;
+        case OLCreditCardTypeMastercard:
+            [format appendString:@"^5[1-5][0-9]{5,}$"];
+            break;
+        case OLCreditCardTypeVisa:
+            [format appendString:@"^4[0-9]{6,}$ "];
+            break;
+        default:
+            break;
+    }
+    return [NSPredicate predicateWithFormat:format];
+}
+
++ (BOOL) validateString:(NSString *)string forType:(OLCreditCardType)type {
+    return [Luhn typeFromString:string] == type;
+}
+
 + (BOOL)validateString:(NSString *)string {
     NSParameterAssert(string != nil);
     NSParameterAssert(string.length >= 9);
@@ -36,7 +104,7 @@
     [formattedString enumerateSubstringsInRange:NSMakeRange(0, [formattedString length]) options:(NSStringEnumerationReverse |NSStringEnumerationByComposedCharacterSequences) usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
         [reversedString appendString:substring];
     }];
-        
+    
     NSUInteger oddSum = 0, evenSum = 0;
     
     for (NSUInteger i = 0; i < [reversedString length]; i++) {

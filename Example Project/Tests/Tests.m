@@ -32,14 +32,14 @@ describe(@"Algorithm", ^{
 
     [validNumbers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
        it([NSString stringWithFormat:@"Should find that %@ is valid", obj], ^{
-           BOOL valid = [Luhn validateString:obj];
+           BOOL valid = [Luhn validateString:obj] && [obj isValidCreditCardNumber];
            [[@(valid) should] beTrue];
        });
     }];
     
     [invalidNumbers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         it([NSString stringWithFormat:@"Should find that %@ is invalid", obj], ^{
-            BOOL valid = [Luhn validateString:obj];
+            BOOL valid = [Luhn validateString:obj] && [obj isValidCreditCardNumber];
             [[@(valid) should] beFalse];
         });
     }];
