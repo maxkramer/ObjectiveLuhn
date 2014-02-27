@@ -8,8 +8,28 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NS_ENUM(NSInteger, OLCreditCardType) {
+    OLCreditCardTypeAmex,
+    OLCreditCardTypeVisa,
+    OLCreditCardTypeMastercard,
+    OLCreditCardTypeDiscover,
+    OLCreditCardTypeDinersClub,
+    OLCreditCardTypeJCB,
+    OLCreditCardTypeUnsupported,
+    OLCreditCardTypeInvalid
+};
+
 @interface Luhn : NSObject
 
-+ (BOOL) validateString:(NSString *) ccString;
++ (OLCreditCardType) typeFromString:(NSString *) string;
++ (BOOL) validateString:(NSString *) string forType:(OLCreditCardType) type;
++ (BOOL) validateString:(NSString *) string;
+
+@end
+
+@interface NSString (Luhn)
+
+- (BOOL) isValidCreditCardNumber;
+- (OLCreditCardType) creditCardType;
 
 @end
