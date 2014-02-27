@@ -35,37 +35,74 @@
 
 <p>This is just a quick port of the Luhn Algorithm, generally used for validating Credit Card details, to Objective-C (iOS).</p>
 
-<p>I have included an example project showing how the method is called and how the validation can be interpreted.</p>
+<p>I have included an example project showing how the class works. It's as simple as calling a single method. No special formatting required, it's all done within the class.</p>
 
-<p>To validate the details all you need to do is import the header file:</p>
+<p>In order to use the example project, you must run <code>pod install</code> before opening the workspace.</p>
 
-<pre><code>#import "Luhn.h"
-</code></pre>
+<h2>
+<a name="instructions" class="anchor" href="#instructions"><span class="octicon octicon-link"></span></a>Instructions</h2>
 
-<p>And then call the class method which returns a boolean value depending on the validity of the input string:</p>
+<p>Import the header:</p>
 
-<pre><code>BOOL isValid = [Luhn validateString:@"some credit card number"];
+<div class="highlight highlight-obj-c"><pre><span class="cp">#import "Luhn.h"</span>
+</pre></div>
 
-if (isValid) {
-   // process payment   
-}
-else {
-   // alert user
-}
-</code></pre>
+<p>Call the class method returning a <code>BOOL</code> as to whether the string is valid or not:</p>
 
-<p>If you come across any issues or feel like a chat, you can contact me using the following methods:</p>
+<div class="highlight highlight-obj-c"><pre><span class="kt">BOOL</span> <span class="n">isValid</span> <span class="o">=</span> <span class="p">[</span><span class="n">Luhn</span> <span class="n">validateString</span><span class="o">:</span><span class="s">@"some credit card number"</span><span class="p">];</span>
+
+<span class="k">if</span> <span class="p">(</span><span class="n">isValid</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// process payment   </span>
+<span class="p">}</span>
+<span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// alert user</span>
+<span class="p">}</span>
+</pre></div>
+
+<p>Alternatively, you can use the NSString category (no additional imports required):</p>
+
+<div class="highlight highlight-obj-c"><pre><span class="n">NSString</span> <span class="o">*</span><span class="n">ccNumber</span> <span class="o">=</span> <span class="s">@"378282246310005"</span><span class="p">;</span>
+<span class="kt">BOOL</span> <span class="n">isValid</span> <span class="o">=</span> <span class="p">[</span><span class="n">ccNumber</span> <span class="n">isValidCreditCardNumber</span><span class="p">];</span>
+</pre></div>
+
+<p>You can also get the type of the credit card i.e. Visa, Diners, Amex, etc:</p>
+
+<div class="highlight highlight-obj-c"><pre><span class="n">OLCreditCardType</span> <span class="o">=</span> <span class="p">[</span><span class="n">ccNumber</span> <span class="n">creditCardType</span><span class="p">];</span>
+<span class="c1">// or</span>
+<span class="n">OLCreditCardType</span> <span class="o">=</span> <span class="p">[</span><span class="n">Luhn</span> <span class="n">typeFromString</span><span class="o">:</span><span class="n">ccNumber</span><span class="p">];</span>
+</pre></div>
+
+<p>If you come across any issues or have a feature request, please open an issue or find me on:</p>
 
 <p>Twitter: <a href="http://twitter.com/maxkramer">@maxkramer</a></p>
 
 <p>Website: <a href="http://maxkramer.co">http://maxkramer.co</a></p>
 
-<p>Email: <a href="mailto:max@maxkramer.co">max@maxkramer.co</a></p>
+<h2>
+<a name="sources" class="anchor" href="#sources"><span class="octicon octicon-link"></span></a>Sources</h2>
+
+<table>
+<thead><tr>
+<th align="left">Name</th>
+<th align="left">Website</th>
+<th align="left">Reason</th>
+</tr></thead>
+<tbody><tr>
+<td align="left">Paypal</td>
+<td align="left"><a href="http://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm">http://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm</a></td>
+<td align="left">List of valid credit card numbers for the unit tests</td>
+</tr></tbody>
+</table><h2>
+<a name="thanks" class="anchor" href="#thanks"><span class="octicon octicon-link"></span></a>Thanks</h2>
+
+<p>Ayaka Nonaka for updating the Cocoapod spec and helping me with other aspects of the project!</p>
+
+<p>Twitter: <a href="https://twitter.com/ayanonagon">@ayanonagon</a></p>
 
 <h2>
 <a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
 
-<p>This project complies with the <a href="https://github.com/MaxKramer/LuhnAlgorithm/blob/master/LICENSE">MIT license</a>.</p>
+<p>This project is licensed under the <a href="https://github.com/MaxKramer/LuhnAlgorithm/blob/master/LICENSE">MIT license</a>.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/MaxKramer">MaxKramer</a></p>
