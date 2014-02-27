@@ -5,15 +5,19 @@ Luhn Algorithm
 
 This is just a quick port of the Luhn Algorithm, generally used for validating Credit Card details, to Objective-C (iOS).
 
-I have included an example project showing how the method is called and how the validation can be interpreted.
+I have included an example project showing how the class works. It's as simple as calling a single method. No special formatting required, it's all done within the class.
 
-To validate the details all you need to do is import the header file:
+In order to use the example project, you must run `pod install` before opening the workspace.
+
+## Instructions
+
+Import the header:
 
 ```obj-c
 #import "Luhn.h"
 ```
     
-And then call the class method which returns a boolean value depending on the validity of the input string:
+Call the class method returning a `BOOL` as to whether the string is valid or not:
 
 ```obj-c
 BOOL isValid = [Luhn validateString:@"some credit card number"];
@@ -26,6 +30,20 @@ else {
 }
 ```
 
+Alternatively, you can use the NSString category (no additional imports required):
+
+```obj-c
+NSString *ccNumber = @"378282246310005";
+BOOL isValid = [ccNumber isValidCreditCardNumber];
+```
+
+You can also get the type of the credit card i.e. Visa, Diners, Amex, etc:
+
+```obj-c
+OLCreditCardType = [ccNumber creditCardType];
+// or
+OLCreditCardType = [Luhn typeFromString:ccNumber];
+```
 
 If you come across any issues or have a feature request, please open an issue or find me on:
 
@@ -35,8 +53,16 @@ Website: [http://maxkramer.co](http://maxkramer.co)
 
 ## Sources
 
-Paypal for the test credit card numbers: [http://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm](http://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm)
+|Name|Website|Reason|
+|:---|:------|:-----|
+|Paypal|[http://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm](http://www.paypalobjects.com/en_US/vhelp/paypalmanager_help/credit_card_numbers.htm)|List of valid credit card numbers for the unit tests|
+
+## Thanks
+
+Ayaka Nonaka for updating the Cocoapod spec and helping me with other aspects of the project!
+
+Twitter: [@ayanonagon](https://twitter.com/ayanonagon)
 
 ## License
 
-This project complies with the [MIT license](https://github.com/MaxKramer/LuhnAlgorithm/blob/master/LICENSE).
+This project is licensed under the [MIT license](https://github.com/MaxKramer/LuhnAlgorithm/blob/master/LICENSE).
