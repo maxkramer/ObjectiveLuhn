@@ -97,6 +97,10 @@
 	</array>
 	<key>invalid</key>
 	<array>
+		<string>hello</string>
+		<string>testing-124024-11</string>
+		<string>p3wn3r4</string>
+		<string>l333t-h4x0r</string>
 		<string>1234567812345678</string>
 		<string>49927398717</string>
 		<string>33036103566</string>
@@ -104,7 +108,7 @@
 		<string>32882469031</string>
 		<string>33841333111</string>
 		<string>30086326829</string>
-		<string>41609620055</string>
+		<string>41609d620055</string>
 		<string>43717494988</string>
 		<string>60131753761</string>
 		<string>62752137389</string>

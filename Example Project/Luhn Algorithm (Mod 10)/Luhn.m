@@ -45,6 +45,10 @@
     }
     
     NSString *formattedString = [string formattedStringForProcessing];
+    if (formattedString == nil || formattedString.length < 9) {
+        return OLCreditCardTypeInvalid;
+    }
+    
     NSArray *enums = @[@(OLCreditCardTypeAmex), @(OLCreditCardTypeDinersClub), @(OLCreditCardTypeDiscover), @(OLCreditCardTypeJCB), @(OLCreditCardTypeMastercard), @(OLCreditCardTypeVisa)];
     
     __block OLCreditCardType type = OLCreditCardTypeInvalid;
@@ -99,6 +103,10 @@
     NSParameterAssert(string.length >= 9);
     
     NSString *formattedString = [string formattedStringForProcessing];
+    if (formattedString == nil || formattedString.length < 9) {
+        return NO;
+    }
+    
     NSMutableString *reversedString = [NSMutableString stringWithCapacity:[formattedString length]];
     
     [formattedString enumerateSubstringsInRange:NSMakeRange(0, [formattedString length]) options:(NSStringEnumerationReverse |NSStringEnumerationByComposedCharacterSequences) usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
