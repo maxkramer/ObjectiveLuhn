@@ -236,7 +236,7 @@
 		508E0A55168FC92800F237F4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Max Kramer";
 				TargetAttributes = {
 					5004D52218BAEA410055C9AF = {
@@ -383,7 +383,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 039C8844EDD641208751B55F /* Pods-Tests.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Luhn Algorithm (Mod 10).app/Luhn Algorithm (Mod 10)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -420,7 +419,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 039C8844EDD641208751B55F /* Pods-Tests.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Luhn Algorithm (Mod 10).app/Luhn Algorithm (Mod 10)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;

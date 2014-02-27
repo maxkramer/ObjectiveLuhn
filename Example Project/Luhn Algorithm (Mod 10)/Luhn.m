@@ -8,12 +8,32 @@
 
 #import "Luhn.h"
 
+@interface NSString (Luhn_Private)
+
+- (NSString *) formattedStringForProcessing;
+
+@end
+
+@implementation NSString (Luhn_Private)
+
+- (NSString *) formattedStringForProcessing {
+    NSCharacterSet *illegalCharacters = [[NSCharacterSet decimalDigitCharacterSet] invertedSet];
+    NSArray *components = [self componentsSeparatedByCharactersInSet:illegalCharacters];
+    return [components componentsJoinedByString:@""];
+}
+
+@end
+
 @implementation Luhn
 
 + (BOOL)validateString:(NSString *)string {
-    NSMutableString *reversedString = [NSMutableString stringWithCapacity:[string length]];
+    NSParameterAssert(string != nil);
+    NSParameterAssert(string.length >= 9);
     
-    [string enumerateSubstringsInRange:NSMakeRange(0, [string length]) options:(NSStringEnumerationReverse |NSStringEnumerationByComposedCharacterSequences) usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
+    NSString *formattedString = [string formattedStringForProcessing];
+    NSMutableString *reversedString = [NSMutableString stringWithCapacity:[formattedString length]];
+    
+    [formattedString enumerateSubstringsInRange:NSMakeRange(0, [formattedString length]) options:(NSStringEnumerationReverse |NSStringEnumerationByComposedCharacterSequences) usingBlock:^(NSString *substring, NSRange substringRange, NSRange enclosingRange, BOOL *stop) {
         [reversedString appendString:substring];
     }];
         

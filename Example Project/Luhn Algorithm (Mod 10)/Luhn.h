@@ -10,6 +10,6 @@
 
 @interface Luhn : NSObject
 
-+ (BOOL)validateString:(NSString *)string;
++ (BOOL) validateString:(NSString *) string;
 
 @end
