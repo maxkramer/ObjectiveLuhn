@@ -44,7 +44,6 @@ describe(@"Algorithm", ^{
             [[@(valid) should] beTrue];
             
             OLCreditCardType calculatedType = [Luhn typeFromString:number];
-            NSLog(@"Found %@ (%@ = %@) = %@", number, typeString, @(actualType), @(calculatedType));
             [[@(actualType) should] equal:@(calculatedType)];
             [[@(calculatedType) should] equal:@([number creditCardType])];
        });
@@ -52,8 +51,17 @@ describe(@"Algorithm", ^{
     
     [invalidNumbers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
         it([NSString stringWithFormat:@"Should find that %@ is invalid", obj], ^{
-            BOOL valid = [Luhn validateString:obj] && [obj isValidCreditCardNumber];
-            [[@(valid) should] beFalse];
+            __block BOOL valid = NO;
+            __block BOOL excepted = NO;
+            @try {
+                valid = [Luhn validateString:obj] && [obj isValidCreditCardNumber];
+            }
+            @catch(NSException *exception) {
+                excepted = YES;
+            }
+            @finally {
+                [[@(valid) should] beFalse];
+            }
         });
     }];
 });
