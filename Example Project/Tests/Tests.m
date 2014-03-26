@@ -40,12 +40,12 @@ describe(@"Algorithm", ^{
             NSString *typeString = dict[@"type"];
             OLCreditCardType actualType = [typeString isEqualToString:@"amex"] ? OLCreditCardTypeAmex : [typeString isEqualToString:@"diners"] ? OLCreditCardTypeDinersClub : [typeString isEqualToString:@"discover"] ? OLCreditCardTypeDiscover : [typeString isEqualToString:@"jcb"] ? OLCreditCardTypeJCB : [typeString isEqualToString:@"mastercard"] ? OLCreditCardTypeMastercard : OLCreditCardTypeVisa;
             
-            BOOL valid = [Luhn validateString:number] && [number isValidCreditCardNumber];
+            BOOL valid = [Luhn validateString:number] && [number ol_isValidCreditCardNumber];
             [[@(valid) should] beTrue];
             
             OLCreditCardType calculatedType = [Luhn typeFromString:number];
             [[@(actualType) should] equal:@(calculatedType)];
-            [[@(calculatedType) should] equal:@([number creditCardType])];
+            [[@(calculatedType) should] equal:@([number ol_creditCardType])];
        });
     }];
     
@@ -54,7 +54,7 @@ describe(@"Algorithm", ^{
             __block BOOL valid = NO;
             __block BOOL excepted = NO;
             @try {
-                valid = [Luhn validateString:obj] && [obj isValidCreditCardNumber];
+                valid = [Luhn validateString:obj] && [obj ol_isValidCreditCardNumber];
             }
             @catch(NSException *exception) {
                 excepted = YES;

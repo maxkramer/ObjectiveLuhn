@@ -29,7 +29,7 @@ typedef NS_ENUM(NSInteger, OLCreditCardType) {
 
 @interface NSString (Luhn)
 
-- (BOOL) isValidCreditCardNumber;
-- (OLCreditCardType) creditCardType;
+- (BOOL) ol_isValidCreditCardNumber;
+- (OLCreditCardType) ol_creditCardType;
 
 @end

@@ -25,7 +25,7 @@
         return YES;
     }
     
-    BOOL isValid = [self.textField.text isValidCreditCardNumber];
+    BOOL isValid = [self.textField.text ol_isValidCreditCardNumber];
     [self.resultLabel setText:[NSString stringWithFormat:@"The number you entered is %@!", isValid ? @"valid" : @"isn't valid"]];
     
     [UIView animateWithDuration:0.5f delay:0.0f options:UIViewAnimationOptionAutoreverse animations:^{

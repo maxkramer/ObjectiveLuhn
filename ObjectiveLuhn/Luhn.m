@@ -10,11 +10,11 @@
 
 @implementation NSString (Luhn)
 
-- (BOOL) isValidCreditCardNumber {
+- (BOOL) ol_isValidCreditCardNumber {
     return [Luhn validateString:self];
 }
 
-- (OLCreditCardType) creditCardType {
+- (OLCreditCardType) ol_creditCardType {
     return [Luhn typeFromString:self];
 }
 
@@ -39,7 +39,7 @@
 @implementation Luhn
 
 + (OLCreditCardType) typeFromString:(NSString *) string {
-    BOOL valid = [string isValidCreditCardNumber];
+    BOOL valid = [string ol_isValidCreditCardNumber];
     if (!valid) {
         return OLCreditCardTypeInvalid;
     }
