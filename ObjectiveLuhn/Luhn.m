@@ -99,9 +99,6 @@
 }
 
 + (BOOL)validateString:(NSString *)string {
-    NSParameterAssert(string != nil);
-    NSParameterAssert(string.length >= 9);
-    
     NSString *formattedString = [string formattedStringForProcessing];
     if (formattedString == nil || formattedString.length < 9) {
         return NO;
