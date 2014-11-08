@@ -40,9 +40,9 @@ BOOL isValid = [ccNumber isValidCreditCardNumber];
 You can also get the type of the credit card i.e. Visa, Diners, Amex, etc:
 
 ```obj-c
-OLCreditCardType = [ccNumber creditCardType];
+OLCreditCardType cardType = [ccNumber creditCardType];
 // or
-OLCreditCardType = [Luhn typeFromString:ccNumber];
+OLCreditCardType cardType = [Luhn typeFromString:ccNumber];
 ```
 
 If you come across any issues or have a feature request, please open an issue or find me on:
