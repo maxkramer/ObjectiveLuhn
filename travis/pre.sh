@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-gem uninstall cocoapods
+gem uninstall cocoapods -x
 gem install cocoapods
 pod setup
 brew update
