@@ -1,0 +1,8 @@
+general:
+    build_dir: "Example Project"
+dependencies:
+    override:
+        -  pod install
+test:
+    override:
+        - xctool build test -workspace "Luhn Algorithm (Mod 10).xcworkspace" -scheme "Luhn Algorithm (Mod 10)" -sdk iphonesimulator -configuration Release -reporter pretty -reporter "plain:$CIRCLE_ARTIFACTS/xctool.log" -reporter "junit:$CIRCLE_TEST_REPORTS/xcode/results.xml"

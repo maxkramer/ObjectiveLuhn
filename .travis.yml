@@ -1,6 +1,0 @@
-language: objective-c
-branches: 
-  except: gh-pages
-rvm: 1.9.3
-before_script: travis/pre.sh
-script: travis/script.sh
