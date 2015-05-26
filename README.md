@@ -1,13 +1,13 @@
 Luhn Algorithm
 ==============
 
-[![Build Status](https://travis-ci.org/MaxKramer/ObjectiveLuhn.png?branch=master)](https://travis-ci.org/MaxKramer/ObjectiveLuhn)
+[![Circle CI](https://circleci.com/gh/MaxKramer/ObjectiveLuhn/tree/master.svg?style=shield)](https://circleci.com/gh/MaxKramer/ObjectiveLuhn/tree/master)
 
-This is just a quick port of the Luhn Algorithm, generally used for validating Credit Card details, to Objective-C (iOS).
+This is a port of the Luhn Algorithm, generally used for validating Credit Card details, to Objective-C (iOS).
 
-I have included an example project showing how the class works. It's as simple as calling a single method. No special formatting required, it's all done within the class.
+It's as simple as calling one single method; no special formatting is required.
 
-In order to use the example project, you must run `pod install` before opening the workspace.
+You must run `pod install` before opening the Example Project's 'workspace.
 
 ## Instructions
 
@@ -65,4 +65,4 @@ Twitter: [@ayanonagon](https://twitter.com/ayanonagon)
 
 ## License
 
-This project is licensed under the [MIT license](https://github.com/MaxKramer/LuhnAlgorithm/blob/master/LICENSE).
+This project is licensed under the [MIT License](https://github.com/MaxKramer/ObjectiveLuhn/blob/master/LICENSE).
