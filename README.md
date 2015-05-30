@@ -1,7 +1,7 @@
 Luhn Algorithm
 ==============
 
-[![Circle CI](https://circleci.com/gh/MaxKramer/ObjectiveLuhn/tree/master.svg?style=shield)](https://circleci.com/gh/MaxKramer/ObjectiveLuhn/tree/master)
+[![Circle CI](https://circleci.com/gh/MaxKramer/ObjectiveLuhn/tree/master.svg?style=shield)](https://circleci.com/gh/MaxKramer/ObjectiveLuhn/tree/master) [![CocoaPods](https://cocoapod-badges.herokuapp.com/v/ObjectiveLuhn/badge.png)](http://cocoapods.org/?q=ObjectiveLuhn)
 
 This is a port of the Luhn Algorithm, generally used for validating Credit Card details, to Objective-C (iOS).
 
