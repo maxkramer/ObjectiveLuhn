@@ -5,7 +5,7 @@ Luhn Algorithm
 
 This is a port of the Luhn Algorithm, generally used for validating Credit Card details, to Objective-C (iOS).
 
-*Swift* port can be found at [https://github.com/MaxKramer/SwiftLuhn](https://github.com/MaxKramer/SwiftLuhn).
+**Swift** port can be found at [https://github.com/MaxKramer/SwiftLuhn](https://github.com/MaxKramer/SwiftLuhn).
 
 It's as simple as calling one single method; no special formatting is required.
 
